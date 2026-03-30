@@ -165,6 +165,16 @@ Interactive docs available at `http://localhost:5000/api-docs` when the server i
 
 ---
 
+## DEMO PROJECT : 
+
+<img width="1847" height="996" alt="Screenshot 2026-03-30 182007" src="https://github.com/user-attachments/assets/dd298132-7380-485e-887a-ce413e94c612" />
+<img width="1834" height="889" alt="Screenshot 2026-03-30 181914" src="https://github.com/user-attachments/assets/a5668609-93d3-44a8-9be9-2d39357f2d28" />
+<img width="1861" height="1022" alt="Screenshot 2026-03-30 181853" src="https://github.com/user-attachments/assets/ab95dceb-a9b8-44fe-84f6-d6cf368cdf86" />
+<img width="1862" height="982" alt="Screenshot 2026-03-30 181819" src="https://github.com/user-attachments/assets/80b5ffcc-7993-4f83-8190-ad49b193edea" />
+
+
+---
+
 ## 🧪 Sample Data (from schema.sql)
 
 **Users:**
