@@ -7,6 +7,8 @@ async function createBooking(req, res, next) {
 
   try {
     const { user_id, event_id, tickets_booked = 1 } = req.body;
+    console.log(user_id," ",event_id," ",tickets_booked);
+    
 
     if (!user_id || !event_id) {
       throw new ApiError(402, "User_id or Event_id is required");
@@ -52,7 +54,7 @@ async function createBooking(req, res, next) {
     while (!codeIsUnique) {
       unique_code = generateUniqueCode();
       const [existing] = await connection.query(
-        "SELECT id FROM bookings WHERE unique_code = ?",
+        "SELECT user_id FROM bookings WHERE unique_code = ?",
         [unique_code],
       );
       if (existing.length === 0) codeIsUnique = true;

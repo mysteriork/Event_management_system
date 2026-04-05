@@ -2,7 +2,7 @@ import { useState } from "react";
 import { markAttendance } from "../services/api";
 
 function AttendancePage() {
-  const [form, setForm] = useState({ event_id: "", code: "" });
+  const [form, setForm] = useState({ user_id: "", code: "" });
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -20,7 +20,7 @@ function AttendancePage() {
     setLoading(true);
 
     try {
-      const res = await markAttendance(form.event_id, form.code);
+      const res = await markAttendance(form.user_id, form.code);
       setResult(res.data);
     } catch (err) {
       setError(
@@ -35,7 +35,7 @@ function AttendancePage() {
     <div className="page">
       <h1 className="page-title">Event Check-In</h1>
       <p style={{ marginBottom: 24, color: "#666" }}>
-        Enter the Event ID and the unique booking code you received when you
+        Enter the User ID and the unique booking code you received when you
         booked your ticket.
       </p>
 
@@ -67,12 +67,12 @@ function AttendancePage() {
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label>Event ID *</label>
+            <label>User ID *</label>
             <input
               type="number"
-              name="event_id"
+              name="user_id"
               placeholder="e.g. 1"
-              value={form.event_id}
+              value={form.user_id}
               onChange={handleChange}
               required
             />

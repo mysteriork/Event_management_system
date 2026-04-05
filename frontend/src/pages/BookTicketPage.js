@@ -72,7 +72,7 @@ function BookTicketPage() {
             <input
               type="number"
               name="user_id"
-              placeholder="e.g. 1"
+              placeholder="e.g. between 1 to 3 only"
               value={form.user_id}
               onChange={handleChange}
               required
